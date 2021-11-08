@@ -224,6 +224,10 @@ public class ClassLoaderImpl implements IClassLoader {
         className = className.replace("classes/", "");
       }
 
+      if(className.startsWith("WEB-INF/classes/")) {
+	  className = className.replace("WEB-INF/classes/", "");
+      }
+
       if (DEBUG_LEVEL > 0) {
         System.err.println("Consider " + className);
       }
